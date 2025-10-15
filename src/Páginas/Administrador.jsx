@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API from "../Servicios/api";
 import "../styles/admin.css";
-import Menu from "../Components/menu";
 
 export default function Administrador() {
   const [usuarios, setUsuarios] = useState([]);
@@ -60,7 +59,6 @@ export default function Administrador() {
     });
     setModoEdicion(false);
   };
-<Menu></Menu>
   // ===========================
   // 🔹 Crear o Editar usuario
   // ===========================

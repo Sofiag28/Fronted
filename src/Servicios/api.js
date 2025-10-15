@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://127.0.0.1:5000",
+  baseURL: import.meta.env.VITE_API_URL,
   headers: { "Content-Type": "application/json" },
 });
 
@@ -14,15 +14,14 @@ export const fetchProducts = () => axios.get("https://fakestoreapi.com/products"
 export const fetchUsers = () => axios.get("https://fakestoreapi.com/users");
 
 // Comercial
-export const fetchVentas = () => API.get("/ventas"); // Crear endpoint en Flask
-export const fetchClientes = () => API.get("/clientes"); // Crear endpoint en Flask
+export const fetchVentas = () => API.get("/ventas");
+export const fetchClientes = () => API.get("/clientes");
 
-//  Profesores
-// --- Estudiantes ---
+// Profesores
 export const fetchEstudiantes = () => API.get("/estudiantes");
 export const fetchEstudiantesPorCurso = (curso) => API.get(`/estudiantes/curso/${curso}`);
 export const fetchTareasCurso = (curso) => API.get(`/tareas/curso/${curso}`);
-export const fetchTodasTareas=()=>API.get("/tareas");
+export const fetchTodasTareas = () => API.get("/tareas");
 export const createTarea = (tarea) => API.post("/crear", tarea);
 export const updateTarea = (id, tarea) => API.put(`/editar/${id}`, tarea);
 export const deleteTarea = (id) => API.delete(`/eliminar/${id}`);
