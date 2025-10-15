@@ -1,0 +1,171 @@
+/* ===============================
+   🎓 CONTENEDOR PRINCIPAL
+=============================== */
+.profesor-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* ===============================
+   📌 TITULO
+=============================== */
+.titulo-lista {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ===============================
+   ⚡ ACCIONES SUPERIORES
+=============================== */
+.acciones-superiores {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.filtro label {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.filtro select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.filtro select:hover {
+  border-color: #4a69bd;
+}
+
+/* ===============================
+   🗂 TABLA DE ESTUDIANTES
+=============================== */
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+.tabla-profesores {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabla-profesores th {
+  background-color: #4a69bd;
+  color: #fff;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.tabla-profesores td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-profesores tr:hover {
+  background-color: #f1f2f6;
+  transition: background 0.2s ease;
+}
+
+/* ===============================
+   ⏳ LOADING
+=============================== */
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-style: italic;
+}
+
+/* ===============================
+   🧩 FORMULARIO DE TAREAS
+=============================== */
+.form-tareas {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-tareas input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.btn-crear {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-crear:hover {
+  background-color: #4338ca;
+}
+
+.btn-icono {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.btn-icono:hover {
+  transform: scale(1.2);
+}
+
+.btn-icono.editar {
+  color: #0ea5e9;
+}
+
+.btn-icono.eliminar {
+  color: #ef4444;
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+=============================== */
+@media (max-width: 768px) {
+  .profesor-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .titulo-lista {
+    font-size: 1.5rem;
+  }
+
+  .acciones-superiores {
+    justify-content: center;
+  }
+
+  .tabla-profesores th,
+  .tabla-profesores td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}

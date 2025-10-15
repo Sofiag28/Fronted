@@ -1,0 +1,108 @@
+/* ===============================
+   🎯 CONTENEDOR PRINCIPAL
+=============================== */
+.marketing-container {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #f9fafc;
+  font-family: "Inter", "Poppins", sans-serif;
+  color: #1e293b;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3730a3;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* ===============================
+   📊 TARJETAS DE MÉTRICAS
+=============================== */
+.metrics-summary {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.metrics-summary div {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(99, 102, 241, 0.15);
+  width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.metrics-summary div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(99, 102, 241, 0.25);
+}
+
+.metrics-summary h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.metrics-summary p {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* ===============================
+   📈 TARJETAS DE GRÁFICOS
+=============================== */
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.chart {
+  flex: 1 1 400px;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chart:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(99, 102, 241, 0.15);
+}
+
+.chart h3 {
+  text-align: center;
+  color: #4338ca;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* ===============================
+   📱 RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+  .marketing-container {
+    padding: 1.5rem;
+  }
+
+  .metrics-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart {
+    width: 100%;
+  }
+}

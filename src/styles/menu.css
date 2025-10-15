@@ -1,0 +1,73 @@
+/* ======== Contenedor general del menú ======== */
+.menu-container {
+  width: 300px; /* 🔹
+  h Compacto */
+  max-width: 100%;
+  height: auto;
+  height: 100%;
+  background: linear-gradient(145deg, #ffffff, #f3e9ff); /* 🔹 Blanco a lila suave */
+  border-radius: 20px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 6px 18px rgba(75, 46, 131, 0.15); /* 🔹 Sombra lila sutil */
+  transition: all 0.3s ease;
+}
+
+/* ======== Logo ======== */
+.menu-logo {
+  width: 100px;
+  height: auto;
+}
+
+/* ======== Navegación ======== */
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  height: 100%;
+}
+
+/* ======== Botones ======== */
+.menu-btn {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #7e57c2, #9575cd); /* 🔹 Degradado profesional */
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: linear-gradient(135deg, #6a42b8, #8e5fd1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgb(255, 255, 255);
+}
+
+/* ======== Responsivo ======== */
+@media (max-width: 600px) {
+  .menu-container {
+    width: 90%;
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .menu-logo {
+    width: 80px;
+  }
+
+  .menu-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

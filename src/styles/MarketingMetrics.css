@@ -1,0 +1,160 @@
+/* ===============================
+   🎯 CONTENEDOR PRINCIPAL
+=============================== */
+.marketing-container {
+  padding: 3rem 2rem;
+  margin-top: 100px;
+  margin: 0 auto;
+  background: #f9fafc;
+  font-family: "Inter", "Poppins", sans-serif;
+  color: #1e293b;
+}
+
+/* ===============================
+   📊 RESUMEN DE MÉTRICAS
+=============================== */
+.metrics-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metrics-summary div {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white;
+  padding: 1.2rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(99, 102, 241, 0.15);
+  flex: 1 1 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metrics-summary div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.25);
+}
+
+.metrics-summary h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.metrics-summary p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ===============================
+   📈 CONTENEDOR DE GRÁFICOS
+=============================== */
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.chart {
+  flex: 1 1 400px;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chart:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(99, 102, 241, 0.15);
+}
+
+.chart h3 {
+  text-align: center;
+  color: #4338ca;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* ===============================
+   🧩 TARJETAS
+=============================== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.8rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(99, 102, 241, 0.2);
+  border-color: #c7d2fe;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+}
+
+.card-body {
+  padding: 1.2rem 1.5rem;
+}
+
+.card-body h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.4rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  margin: 0.2rem 0;
+  color: #475569;
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+=============================== */
+@media (max-width: 1024px) {
+  .metrics-summary {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .charts-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .marketing-container {
+    padding: 1.5rem;
+  }
+
+  .card-body h4 {
+    font-size: 1rem;
+  }
+
+  .card-body p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,106 @@
+/* ======== Contenedor general ======== */
+.estudiantes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  width: 75%;
+  background: linear-gradient(180deg, #D5E6F7 0%, #D5ADFB 100%);
+  min-height: 100vh;
+}
+
+/* ======== Título ======== */
+.estudiantes-titulo {
+  text-align: center;
+  color: #4b2e83;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* ======== Grid de tarjetas ======== */
+.companeros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ======== Tarjeta de estudiante ======== */
+.companero-card {
+  background: linear-gradient(145deg, #ffffff, #f1f1f7);
+  border-radius: 16px;
+  left: 15px;
+  box-shadow: 0 8px 20px rgba(75, 46, 131, 0.1);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.companero-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(75, 46, 131, 0.15);
+}
+
+/* ======== Imagen ======== */
+.companero-foto {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+  border: 3px solid #4b2e83;
+  transition: transform 0.3s ease;
+}
+
+.companero-card:hover .companero-foto {
+  transform: scale(1.08);
+}
+
+/* ======== Nombre y curso ======== */
+.companero-nombre {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d2d44;
+  margin-bottom: 0.3rem;
+}
+
+.companero-curso {
+  color: #6c6c8a;
+  font-size: 0.95rem;
+}
+
+/* ======== Efecto decorativo ======== */
+.companero-card::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -40%;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(135deg, #d3c4ff33, #b39ddb33);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.4s ease;
+}
+
+.companero-card:hover::before {
+  transform: scale(1);
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 600px) {
+  .estudiantes-container {
+    padding: 1rem;
+  }
+
+  .companero-card {
+    padding: 1rem;
+  }
+
+  .companero-nombre {
+    font-size: 1rem;
+  }
+}
