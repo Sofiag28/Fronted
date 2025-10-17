@@ -19,7 +19,7 @@ export default function Estudiantes() {
           return;
         }
 
-        const respuesta = await API.get(`/estudiantes/listar/${cursoUsuario}`);
+        const respuesta = await API.get(`/estudiantes/curso/${cursoUsuario}`);
         setEstudiantes(respuesta.data);
       } catch (err) {
         console.error("Error cargando estudiantes:", err);
