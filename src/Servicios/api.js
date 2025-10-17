@@ -14,8 +14,8 @@ export const fetchProducts = () => axios.get("https://fakestoreapi.com/products"
 export const fetchUsers = () => axios.get("https://fakestoreapi.com/users");
 
 // Comercial
-export const fetchVentas = () => API.get("/ventas");
-export const fetchClientes = () => API.get("/clientes");
+export const fetchVentas = () => API.get("https://fakestoreapi.com/products");
+export const fetchClientes = () => API.get("https://fakestoreapi.com/users");
 
 // Profesores
 export const fetchEstudiantes = () => API.get("/estudiantes");
