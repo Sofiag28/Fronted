@@ -18,11 +18,11 @@ export const fetchVentas = () => API.get("https://fakestoreapi.com/products");
 export const fetchClientes = () => API.get("https://fakestoreapi.com/users");
 
 // Profesores
-export const fetchEstudiantes = () => API.get("/estudiantes");
+export const fetchEstudiantes = () => API.get(`/estudiantes`);
 export const fetchEstudiantesPorCurso = (curso) => API.get(`/estudiantes/curso/${curso}`);
 export const fetchTareasCurso = (curso) => API.get(`/curso/${curso}`);
-export const fetchTodasTareas = () => API.get("/tareas");
-export const createTarea = (tarea) => API.post("/crear", tarea);
+export const fetchTodasTareas = () => API.get(`/tareas`);
+export const createTarea = (tarea) => API.post(`/crear`, tarea);
 export const updateTarea = (id, tarea) => API.put(`/editar/${id}`, tarea);
 export const deleteTarea = (id) => API.delete(`/eliminar/${id}`);
 

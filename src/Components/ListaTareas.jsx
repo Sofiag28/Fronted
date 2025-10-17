@@ -47,28 +47,37 @@ export default function TareasPorCurso() {
 
   // 🔹 Crear nueva tarea
   const handleCrearTarea = async (e) => {
-    e.preventDefault();
-    if (!nuevaTarea.titulo.trim() || !nuevaTarea.id_curso) {
-      return alert("Debe ingresar el título y seleccionar un curso");
-    }
+  e.preventDefault();
 
-    try {
-      const res = await createTarea(nuevaTarea);
-      setTareas([...tareas, res.data]);
-      setNuevaTarea({
-        titulo: "",
-        descripcion: "",
-        estado: "Pendiente",
-        fecha_entrega: "",
-        id_curso: "",
-      });
-      alert("Tarea creada correctamente 🎉");
-    } catch (error) {
-      console.error("Error al crear tarea:", error);
-      alert("Hubo un error al crear la tarea 😢");
-    }
-  };
+  if (!nuevaTarea.titulo.trim() || !nuevaTarea.id_curso) {
+    return alert("Debe ingresar el título y seleccionar un curso");
+  }
 
+  // 🔹 Formatear la fecha correctamente
+  const fechaFormateada = nuevaTarea.fecha_entrega
+    ? new Date(nuevaTarea.fecha_entrega).toISOString().split("T")[0]
+    : null;
+
+  try {
+    const res = await createTarea({
+      ...nuevaTarea,
+      fecha_entrega: fechaFormateada,
+    });
+
+    setTareas([...tareas, res.data]);
+    setNuevaTarea({
+      titulo: "",
+      descripcion: "",
+      estado: "Pendiente",
+      fecha_entrega: "",
+      id_curso: "",
+    });
+    alert("Tarea creada correctamente 🎉");
+  } catch (error) {
+    console.error("Error al crear tarea:", error);
+    alert("Hubo un error al crear la tarea 😢");
+  }
+};
   // 🔹 Editar tarea
   const handleEditarTarea = (tarea) => {
     setEditando(tarea);
@@ -82,6 +91,14 @@ export default function TareasPorCurso() {
       id_curso: tarea.id_curso || "",
     });
   };
+  console.log("Datos que se envían al backend:", {
+  titulo,
+  descripcion,
+  estado,
+  id_curso,
+  fecha_entrega
+});
+
 
   // 🔹 Actualizar tarea
   const handleActualizarTarea = async (e) => {
