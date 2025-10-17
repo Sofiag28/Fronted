@@ -91,13 +91,6 @@ export default function TareasPorCurso() {
       id_curso: tarea.id_curso || "",
     });
   };
-  console.log("Datos que se envían al backend:", {
-  titulo,
-  descripcion,
-  estado,
-  id_curso,
-  fecha_entrega
-});
 
 
   // 🔹 Actualizar tarea
