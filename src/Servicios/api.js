@@ -6,9 +6,9 @@ const API = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-export const fetchStudentMetrics = (id) => API.get(`/metricas/estudiante/${id}`);
-export const fetchTareasEstudiante = (id) => API.get(`/tareas/estudiante/${id}`);
-export const updateTareaEstado = (id, estado) => API.put(`/tareas/${id}/estado`, { estado });
+export const fetchStudentMetrics = (id) => API.get(`/metricas/${id}`);
+export const fetchTareasEstudiante = (id) => API.get(`/curso/estudiante/${id}`);
+export const updateTareaEstado = (id, estado) => API.put(`/${id}/estado`, { estado });
 
 export const fetchProducts = () => axios.get("https://fakestoreapi.com/products");
 export const fetchUsers = () => axios.get("https://fakestoreapi.com/users");
@@ -20,7 +20,7 @@ export const fetchClientes = () => API.get("/clientes");
 // Profesores
 export const fetchEstudiantes = () => API.get("/estudiantes");
 export const fetchEstudiantesPorCurso = (curso) => API.get(`/estudiantes/curso/${curso}`);
-export const fetchTareasCurso = (curso) => API.get(`/tareas/curso/${curso}`);
+export const fetchTareasCurso = (curso) => API.get(`/curso/${curso}`);
 export const fetchTodasTareas = () => API.get("/tareas");
 export const createTarea = (tarea) => API.post("/crear", tarea);
 export const updateTarea = (id, tarea) => API.put(`/editar/${id}`, tarea);

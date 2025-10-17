@@ -29,7 +29,7 @@
         const nuevoEstado =
         estadoActual === "completada" ? "pendiente" : "completada";
         try {
-        await API.put(`/tareas/${id}/estado`, { estado: nuevoEstado });
+        await API.put(`${id}/estado`, { estado: nuevoEstado });
         setTareas((prev) =>
             prev.map((t) => (t.id === id ? { ...t, estado: nuevoEstado } : t))
         );
